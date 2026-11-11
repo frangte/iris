@@ -1,9 +1,23 @@
+/* Web build only: the browser-owned surfaces carry the app's palette too. */
 :root {
-  --font-display:
-    Spline Sans, Inter, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji,
-    Segoe UI Symbol, Noto Color Emoji;
-  --font-mono:
-    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
-  --font-rounded: 'SF Pro Rounded', 'Hiragino Maru Gothic ProN', Meiryo, 'MS PGothic', sans-serif;
-  --font-serif: Georgia, 'Times New Roman', serif;
+  color-scheme: light dark;
+  --tint: #d1336b;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --tint: #ff6f9f; }
+}
+html, body { background: #f2f2f7; }
+@media (prefers-color-scheme: dark) {
+  html, body { background: #000; }
+}
+::selection { background: color-mix(in srgb, var(--tint) 28%, transparent); }
+input, textarea { caret-color: var(--tint); font-variant-numeric: tabular-nums; }
+:focus-visible:not(input):not(textarea) { outline: 2px solid var(--tint); outline-offset: 2px; border-radius: 8px; }
+input:focus-visible, textarea:focus-visible { outline: none; }
+* { scrollbar-width: thin; scrollbar-color: color-mix(in srgb, currentColor 25%, transparent) transparent; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 1ms !important; transition-duration: 1ms !important; }
 }

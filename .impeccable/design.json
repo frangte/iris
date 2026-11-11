@@ -1,0 +1,592 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-10T02:56:45+00:00",
+  "title": "Design System: Floied",
+  "extensions": {
+    "colorMeta": {
+      "tint": {
+        "role": "primary",
+        "displayName": "Shop Rose",
+        "canonical": "#D1336B",
+        "tonalRamp": [
+          "#180409",
+          "#440D20",
+          "#751839",
+          "#AB2254",
+          "#D24A75",
+          "#E8819A",
+          "#F9B3C2",
+          "#FFE4EB"
+        ]
+      },
+      "tint-dark": {
+        "role": "primary",
+        "displayName": "Shop Rose (Dark Mode text)",
+        "canonical": "#FF6F9F",
+        "tonalRamp": [
+          "#17050A",
+          "#411122",
+          "#711E3D",
+          "#A52C5A",
+          "#CC517B",
+          "#E2849F",
+          "#F5B5C5",
+          "#FFE5ED"
+        ]
+      },
+      "tint-fill": {
+        "role": "primary",
+        "displayName": "Shop Rose Fill (both modes)",
+        "canonical": "#D1336B",
+        "tonalRamp": [
+          "#180409",
+          "#440D20",
+          "#751839",
+          "#AB2254",
+          "#D24A75",
+          "#E8819A",
+          "#F9B3C2",
+          "#FFE4EB"
+        ]
+      },
+      "tint-soft": {
+        "role": "primary",
+        "displayName": "Rose Wash",
+        "canonical": "#FCE8EF",
+        "tonalRamp": [
+          "#180409",
+          "#440D20",
+          "#751839",
+          "#AB2254",
+          "#D24A75",
+          "#E8819A",
+          "#F9B3C2",
+          "#FFE4EB"
+        ]
+      },
+      "tint-soft-dark": {
+        "role": "primary",
+        "displayName": "Rose Wash (Dark)",
+        "canonical": "#3A1624",
+        "tonalRamp": [
+          "#180409",
+          "#440D20",
+          "#751839",
+          "#AB2254",
+          "#D24A75",
+          "#E8819A",
+          "#F9B3C2",
+          "#FFE4EB"
+        ]
+      },
+      "grouped-background": {
+        "role": "neutral",
+        "displayName": "Grouped Background (iOS systemGroupedBackground)",
+        "canonical": "#F2F2F7",
+        "tonalRamp": [
+          "#0B0B0C",
+          "#252526",
+          "#424244",
+          "#616164",
+          "#828286",
+          "#A5A5A8",
+          "#C9C9CB",
+          "#EEEEEF"
+        ]
+      },
+      "grouped-background-dark": {
+        "role": "neutral",
+        "displayName": "Grouped Background (Dark)",
+        "canonical": "#000000",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#252526",
+          "#424243",
+          "#616163",
+          "#828284",
+          "#A5A5A6",
+          "#C9C9CA",
+          "#EEEEEF"
+        ]
+      },
+      "cell": {
+        "role": "neutral",
+        "displayName": "Cell (iOS secondarySystemGroupedBackground)",
+        "canonical": "#FFFFFF",
+        "tonalRamp": [
+          "#0B0B0C",
+          "#252526",
+          "#424244",
+          "#616164",
+          "#828286",
+          "#A5A5A8",
+          "#C9C9CB",
+          "#EEEEEF"
+        ]
+      },
+      "cell-dark": {
+        "role": "neutral",
+        "displayName": "Cell (Dark)",
+        "canonical": "#1C1C1E",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#252526",
+          "#424243",
+          "#616163",
+          "#828284",
+          "#A5A5A6",
+          "#C9C9CA",
+          "#EEEEEF"
+        ]
+      },
+      "cell-pressed": {
+        "role": "neutral",
+        "displayName": "Cell Pressed (iOS systemGray5)",
+        "canonical": "#E5E5EA",
+        "tonalRamp": [
+          "#0B0B0C",
+          "#252526",
+          "#424244",
+          "#616164",
+          "#828286",
+          "#A5A5A8",
+          "#C9C9CB",
+          "#EEEEEF"
+        ]
+      },
+      "label": {
+        "role": "neutral",
+        "displayName": "Label (iOS label)",
+        "canonical": "#1C1C1E",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#252526",
+          "#424243",
+          "#616163",
+          "#828284",
+          "#A5A5A6",
+          "#C9C9CA",
+          "#EEEEEF"
+        ]
+      },
+      "secondary-label": {
+        "role": "neutral",
+        "displayName": "Secondary Label",
+        "canonical": "#5E5E64",
+        "tonalRamp": [
+          "#0B0B0C",
+          "#252527",
+          "#424245",
+          "#616166",
+          "#828287",
+          "#A4A4A9",
+          "#C9C9CC",
+          "#EEEEF0"
+        ]
+      },
+      "tertiary-label": {
+        "role": "neutral",
+        "displayName": "Tertiary Label",
+        "canonical": "#8A8A8E",
+        "tonalRamp": [
+          "#0B0B0C",
+          "#252527",
+          "#424245",
+          "#616166",
+          "#828287",
+          "#A4A4A9",
+          "#C9C9CC",
+          "#EEEEF0"
+        ]
+      },
+      "separator": {
+        "role": "neutral",
+        "displayName": "Separator (hairline)",
+        "canonical": "#D8D8DC",
+        "tonalRamp": [
+          "#0B0B0C",
+          "#252526",
+          "#424244",
+          "#616164",
+          "#828285",
+          "#A5A5A7",
+          "#C9C9CA",
+          "#EEEEEF"
+        ]
+      },
+      "fill": {
+        "role": "neutral",
+        "displayName": "Fill (iOS tertiarySystemFill)",
+        "canonical": "#E9E9EE",
+        "tonalRamp": [
+          "#0B0B0C",
+          "#252526",
+          "#424244",
+          "#616164",
+          "#828285",
+          "#A5A5A7",
+          "#C9C9CA",
+          "#EEEEEF"
+        ]
+      },
+      "danger": {
+        "role": "error",
+        "displayName": "Debt Red (iOS systemRed)",
+        "canonical": "#C4001A",
+        "tonalRamp": [
+          "#1A0403",
+          "#470B0B",
+          "#7B1316",
+          "#B31A20",
+          "#DB4743",
+          "#EF8077",
+          "#FFB3AB",
+          "#FFE4E0"
+        ]
+      },
+      "danger-dark": {
+        "role": "error",
+        "displayName": "Debt Red (Dark)",
+        "canonical": "#FF6961",
+        "tonalRamp": [
+          "#180504",
+          "#44110F",
+          "#751E1D",
+          "#AB2C2B",
+          "#D2524C",
+          "#E7867D",
+          "#F9B6AE",
+          "#FFE6E2"
+        ]
+      },
+      "danger-soft": {
+        "role": "error",
+        "displayName": "Debt Wash",
+        "canonical": "#FFE8E8",
+        "tonalRamp": [
+          "#1A0403",
+          "#470B0B",
+          "#7B1316",
+          "#B31A20",
+          "#DB4743",
+          "#EF8077",
+          "#FFB3AB",
+          "#FFE4E0"
+        ]
+      },
+      "success": {
+        "role": "success",
+        "displayName": "Paid Green (iOS systemGreen)",
+        "canonical": "#1E7B34",
+        "tonalRamp": [
+          "#040E05",
+          "#0E2C13",
+          "#1A4E24",
+          "#267335",
+          "#4B9656",
+          "#7FB584",
+          "#B1D4B4",
+          "#E3F4E4"
+        ]
+      },
+      "success-dark": {
+        "role": "success",
+        "displayName": "Paid Green (Dark)",
+        "canonical": "#4CD964",
+        "tonalRamp": [
+          "#010F03",
+          "#002F06",
+          "#00530A",
+          "#00790C",
+          "#169D38",
+          "#6ABB72",
+          "#A5D9A8",
+          "#DEF6DF"
+        ]
+      },
+      "status-active-bg": {
+        "role": "status",
+        "displayName": "Pill: in progress (bg)",
+        "canonical": "#FCE8EF"
+      },
+      "status-active-fg": {
+        "role": "status",
+        "displayName": "Pill: in progress (text)",
+        "canonical": "#A8265A"
+      },
+      "status-late-bg": {
+        "role": "status",
+        "displayName": "Pill: late (bg)",
+        "canonical": "#FFE8E8"
+      },
+      "status-late-fg": {
+        "role": "status",
+        "displayName": "Pill: late (text)",
+        "canonical": "#B00018"
+      },
+      "status-done-bg": {
+        "role": "status",
+        "displayName": "Pill: done (bg)",
+        "canonical": "#E3F5E7"
+      },
+      "status-done-fg": {
+        "role": "status",
+        "displayName": "Pill: done (text)",
+        "canonical": "#1A6E2E"
+      },
+      "status-cancelled-bg": {
+        "role": "status",
+        "displayName": "Pill: cancelled (bg)",
+        "canonical": "#EDEDF0"
+      },
+      "status-cancelled-fg": {
+        "role": "status",
+        "displayName": "Pill: cancelled (text)",
+        "canonical": "#5E5E64"
+      }
+    },
+    "typographyMeta": {
+      "largeTitle": {
+        "displayName": "largeTitle",
+        "purpose": "Navigation large titles; the order remaining amount."
+      },
+      "title1": {
+        "displayName": "title1",
+        "purpose": "Order customer name on detail; invite code."
+      },
+      "title2": {
+        "displayName": "title2",
+        "purpose": "Summary tile values; order-form remaining."
+      },
+      "title3": {
+        "displayName": "title3",
+        "purpose": "Shop name row heading; web rail wordmark."
+      },
+      "headline": {
+        "displayName": "headline",
+        "purpose": "Order row names, button labels, empty titles."
+      },
+      "body": {
+        "displayName": "body",
+        "purpose": "Row titles and field input."
+      },
+      "callout": {
+        "displayName": "callout",
+        "purpose": "Order date line on detail."
+      },
+      "subhead": {
+        "displayName": "subhead",
+        "purpose": "Row subtitles, money lines, chips, small buttons, toast."
+      },
+      "footnote": {
+        "displayName": "footnote",
+        "purpose": "Uppercase grouped section headers, footers, tile labels, segments."
+      },
+      "caption": {
+        "displayName": "caption",
+        "purpose": "Status pills (600) and web bottom tab labels."
+      },
+      "money": {
+        "displayName": "money",
+        "purpose": "Tabular figures modifier for every amount and count."
+      }
+    },
+    "shadows": [
+      {
+        "name": "segment-thumb",
+        "value": "0 1px 3px rgba(0,0,0,0.12), 0 1px 1px rgba(0,0,0,0.04)",
+        "purpose": "Selected segment of the web segmented control only (mirrors UISegmentedControl)."
+      }
+    ],
+    "motion": [
+      {
+        "name": "toast-in",
+        "value": "fade 160ms",
+        "purpose": "Toast entrance; fade only, no slide."
+      },
+      {
+        "name": "toast-out",
+        "value": "fade 200ms",
+        "purpose": "Toast exit."
+      },
+      {
+        "name": "toast-dwell",
+        "value": "2600ms",
+        "purpose": "Toast visible duration."
+      },
+      {
+        "name": "press-opacity",
+        "value": "opacity 0.7 (buttons, chips); cell-pressed background (rows)",
+        "purpose": "Pressed feedback."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation/transition 1ms under prefers-reduced-motion (web)",
+        "purpose": "Respect system setting."
+      },
+      {
+        "name": "haptic-success",
+        "value": "Haptics.NotificationFeedbackType.Success (iOS/Android)",
+        "purpose": "Payment recorded."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "web-rail",
+        "value": "900px"
+      },
+      {
+        "name": "content-max",
+        "value": "720px"
+      }
+    ],
+    "platform": {
+      "iosColorSource": "PlatformColor (systemGroupedBackground, secondarySystemGroupedBackground, systemGray5, label, secondaryLabel, tertiaryLabel, placeholderText, separator, tertiarySystemFill, systemRed, systemGreen); hex tokens are the Android/web values",
+      "icons": "SF Symbols on iOS, Material Symbols on Android/web, one mapping table",
+      "focus": "web: 2px solid tint outline, offset 2px (rows: inset -2px)"
+    }
+  },
+  "components": [
+    {
+      "name": "Filled Button",
+      "kind": "button",
+      "refersTo": "button-filled",
+      "description": "The one primary action per context: next status step, \"Thu đủ X\".",
+      "html": "<button class=\"ds-btn ds-btn-filled\">Thu đủ 480.000đ</button>",
+      "css": ".ds-btn{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',Roboto,sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 16px;border:none;border-radius:12px;font-size:17px;line-height:22px;font-weight:600;cursor:pointer;transition:opacity .1s}.ds-btn:active{opacity:.7}.ds-btn:focus-visible{outline:2px solid #D1336B;outline-offset:2px}.ds-btn:disabled{opacity:.4}.ds-btn-filled{background:#D1336B;color:#fff;font-variant-numeric:tabular-nums}"
+    },
+    {
+      "name": "Tinted Button",
+      "kind": "button",
+      "refersTo": "button-tinted",
+      "description": "Secondary action beside a filled button (\"Số khác\").",
+      "html": "<button class=\"ds-btn ds-btn-tinted\">Số khác</button>",
+      "css": ".ds-btn{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',Roboto,sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 16px;border:none;border-radius:12px;font-size:17px;line-height:22px;font-weight:600;cursor:pointer;transition:opacity .1s}.ds-btn:active{opacity:.7}.ds-btn:focus-visible{outline:2px solid #D1336B;outline-offset:2px}.ds-btn:disabled{opacity:.4}.ds-btn-tinted{background:#FCE8EF;color:#D1336B}"
+    },
+    {
+      "name": "Destructive Button",
+      "kind": "button",
+      "refersTo": "button-destructive",
+      "description": "Cancel or delete actions.",
+      "html": "<button class=\"ds-btn ds-btn-destructive\">Huỷ đơn</button>",
+      "css": ".ds-btn{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',Roboto,sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 16px;border:none;border-radius:12px;font-size:17px;line-height:22px;font-weight:600;cursor:pointer;transition:opacity .1s}.ds-btn:active{opacity:.7}.ds-btn:focus-visible{outline:2px solid #D1336B;outline-offset:2px}.ds-btn:disabled{opacity:.4}.ds-btn-destructive{background:#FFE8E8;color:#C4001A}"
+    },
+    {
+      "name": "Inset Grouped Section with Order Rows",
+      "kind": "card",
+      "refersTo": "section-group",
+      "description": "Uppercase footnote header, white 12px group, hairline separators inset 16px, order row with status pill and money owed.",
+      "html": "<div class=\"ds-sec\"><div class=\"ds-sec-h\">SÁNG</div><div class=\"ds-group\"><button class=\"ds-row\"><span class=\"ds-main\"><span class=\"ds-t\">Chị Thảo</span><span class=\"ds-s\">08:00–10:00 · Bó hồng đỏ 20 bông</span></span><span class=\"ds-d\"><span class=\"ds-pill ds-pill-active\">Đang làm</span><span class=\"ds-m\">Còn 480.000đ</span></span></button><button class=\"ds-row\"><span class=\"ds-main\"><span class=\"ds-t\">Anh Minh</span><span class=\"ds-s\">Hôm qua · 15:00–17:00</span></span><span class=\"ds-d\"><span class=\"ds-pill ds-pill-late\">Trễ</span><span class=\"ds-m\">Còn 875.000đ</span></span></button><button class=\"ds-row\"><span class=\"ds-main\"><span class=\"ds-t\">Cô Lan</span><span class=\"ds-s\">11:00–12:00 · Hoa cúng</span></span><span class=\"ds-d\"><span class=\"ds-pill ds-pill-done\">Đã giao</span><span class=\"ds-m ds-ok\">Đã thu đủ</span></span></button></div></div>",
+      "css": ".ds-sec{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',Roboto,sans-serif;background:#F2F2F7;padding:16px}.ds-sec-h{font-size:13px;line-height:18px;letter-spacing:.2px;color:#5E5E64;padding:0 16px 6px}.ds-group{background:#fff;border-radius:12px;overflow:hidden}.ds-row{display:flex;width:100%;align-items:center;gap:12px;min-height:48px;padding:11px 16px;border:none;background:#fff;text-align:left;cursor:pointer;font:inherit}.ds-row+.ds-row{box-shadow:inset 16px 0 0 #fff,inset 0 .5px 0 #D8D8DC}.ds-row:active{background:#E5E5EA}.ds-row:focus-visible{outline:2px solid #D1336B;outline-offset:-2px}.ds-main{flex:1;display:flex;flex-direction:column;gap:2px;min-width:0}.ds-t{font-size:17px;line-height:22px;font-weight:600;color:#1C1C1E}.ds-s{font-size:15px;line-height:20px;color:#5E5E64;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ds-d{display:flex;flex-direction:column;align-items:flex-end;gap:4px}.ds-pill{font-size:12px;line-height:16px;font-weight:600;padding:3px 8px;border-radius:999px}.ds-pill-active{background:#FCE8EF;color:#A8265A}.ds-pill-late{background:#FFE8E8;color:#B00018}.ds-pill-done{background:#E3F5E7;color:#1A6E2E}.ds-m{font-size:13px;line-height:18px;color:#1C1C1E;font-variant-numeric:tabular-nums}.ds-ok{color:#1E7B34}"
+    },
+    {
+      "name": "Status Pills",
+      "kind": "chip",
+      "refersTo": "pill-active",
+      "description": "The four state meanings: in progress, late, done, cancelled.",
+      "html": "<div class=\"ds-pills\"><span class=\"ds-p ds-a\">Đang làm</span><span class=\"ds-p ds-l\">Trễ</span><span class=\"ds-p ds-dn\">Đã giao</span><span class=\"ds-p ds-c\">Đã huỷ</span></div>",
+      "css": ".ds-pills{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',Roboto,sans-serif;display:flex;gap:8px}.ds-p{font-size:12px;line-height:16px;font-weight:600;padding:3px 8px;border-radius:999px}.ds-a{background:#FCE8EF;color:#A8265A}.ds-l{background:#FFE8E8;color:#B00018}.ds-dn{background:#E3F5E7;color:#1A6E2E}.ds-c{background:#EDEDF0;color:#5E5E64}"
+    },
+    {
+      "name": "Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Selectable capsule for channel, quick date, time slot.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip\" aria-pressed=\"true\">Zalo</button><button class=\"ds-chip\">Messenger</button><button class=\"ds-chip\">Gọi điện</button></div>",
+      "css": ".ds-chips{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',Roboto,sans-serif;display:flex;gap:8px}.ds-chip{min-height:36px;padding:0 14px;border:none;border-radius:999px;background:#E9E9EE;color:#1C1C1E;font:inherit;font-size:15px;line-height:20px;cursor:pointer}.ds-chip[aria-pressed=true]{background:#D1336B;color:#fff;font-weight:600}.ds-chip:active{opacity:.7}.ds-chip:focus-visible{outline:2px solid #D1336B;outline-offset:2px}"
+    },
+    {
+      "name": "Field Row",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Settings-style labelled input inside a section; money variant right-aligned with đ suffix.",
+      "html": "<label class=\"ds-field\"><span class=\"ds-fl\">Số tiền thu</span><input class=\"ds-fi\" inputmode=\"numeric\" placeholder=\"0\" value=\"200.000\"><span class=\"ds-fs\">đ</span></label>",
+      "css": ".ds-field{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',Roboto,sans-serif;display:flex;align-items:center;gap:12px;min-height:48px;padding:0 16px;background:#fff;border-radius:12px}.ds-field:focus-within{outline:2px solid #D1336B;outline-offset:-2px}.ds-fl{width:92px;font-size:17px;color:#1C1C1E}.ds-fi{flex:1;border:none;outline:none;background:transparent;font:inherit;font-size:17px;line-height:22px;padding:12px 0;text-align:right;color:#1C1C1E;caret-color:#D1336B;font-variant-numeric:tabular-nums}.ds-fi::placeholder{color:#8A8A8E}.ds-fs{color:#5E5E64;font-size:17px}"
+    },
+    {
+      "name": "Segmented Control (web)",
+      "kind": "nav",
+      "refersTo": "segmented-track",
+      "description": "iOS-look segmented control drawn on web; device uses the native control.",
+      "html": "<div class=\"ds-seg\" role=\"tablist\"><button role=\"tab\" aria-selected=\"true\">Sắp tới</button><button role=\"tab\">Tất cả</button><button role=\"tab\">Đã xong</button></div>",
+      "css": ".ds-seg{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',Roboto,sans-serif;display:flex;background:#E9E9EE;border-radius:9px;padding:2px;min-height:32px}.ds-seg button{flex:1;min-height:28px;border:none;background:transparent;border-radius:7px;font:inherit;font-size:13px;line-height:18px;font-weight:500;color:#5E5E64;cursor:pointer}.ds-seg button:hover{opacity:.75}.ds-seg button[aria-selected=true]{background:#fff;color:#1C1C1E;font-weight:600;opacity:1;box-shadow:0 1px 3px rgba(0,0,0,.12),0 1px 1px rgba(0,0,0,.04)}.ds-seg button:focus-visible{outline:2px solid #D1336B;outline-offset:2px}"
+    },
+    {
+      "name": "Bottom Tab Bar (web, under 900px)",
+      "kind": "nav",
+      "refersTo": "row",
+      "description": "Web stand-in for native tabs; rose selected, secondary otherwise.",
+      "html": "<nav class=\"ds-tabs\"><a aria-current=\"page\"><svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\"><circle cx=\"12\" cy=\"12\" r=\"9\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M12 7v5l3 2\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg>Hôm nay</a><a><svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\"><rect x=\"4\" y=\"5\" width=\"16\" height=\"14\" rx=\"2\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></svg>Đơn</a><a><svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\"><circle cx=\"9\" cy=\"9\" r=\"3\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/><path d=\"M3 19c0-3 3-5 6-5s6 2 6 5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"/></svg>Khách</a><a><svg viewBox=\"0 0 24 24\" width=\"22\" height=\"22\"><path d=\"M4 10h16v9H4zM3 6h18l-1 4H4z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linejoin=\"round\"/></svg>Shop</a></nav>",
+      "css": ".ds-tabs{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',Roboto,sans-serif;display:flex;background:#fff;border-top:.5px solid #D8D8DC;padding:4px 0 8px}.ds-tabs a{flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;min-height:48px;justify-content:center;font-size:12px;line-height:16px;color:#5E5E64;cursor:pointer;text-decoration:none}.ds-tabs a[aria-current]{color:#D1336B;font-weight:600}.ds-tabs a:active{opacity:.7}.ds-tabs a:focus-visible{outline:2px solid #D1336B;outline-offset:2px;border-radius:8px}"
+    },
+    {
+      "name": "Money Block",
+      "kind": "custom",
+      "refersTo": "section-group",
+      "description": "Signature: remaining amount in largeTitle tabular figures, total/paid lines, Thu đủ + Số khác.",
+      "html": "<div class=\"ds-money\"><div class=\"ds-ml\">Còn phải thu</div><div class=\"ds-mv\">480.000đ</div><div class=\"ds-line\"><span>Tổng đơn</span><span>680.000đ</span></div><div class=\"ds-line\"><span>Đã thu</span><span>200.000đ</span></div><div class=\"ds-acts\"><button class=\"ds-b1\">Thu đủ 480.000đ</button><button class=\"ds-b2\">Số khác</button></div></div>",
+      "css": ".ds-money{font-family:-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',Roboto,sans-serif;background:#fff;border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:4px}.ds-ml{font-size:15px;line-height:20px;color:#5E5E64}.ds-mv{font-size:34px;line-height:41px;font-weight:700;color:#1C1C1E;font-variant-numeric:tabular-nums}.ds-line{display:flex;justify-content:space-between;font-size:15px;line-height:20px;color:#5E5E64;font-variant-numeric:tabular-nums}.ds-line span:last-child{color:#1C1C1E}.ds-acts{display:flex;gap:8px;margin-top:12px}.ds-acts button{min-height:50px;padding:0 16px;border:none;border-radius:12px;font:inherit;font-size:17px;font-weight:600;cursor:pointer}.ds-acts button:active{opacity:.7}.ds-acts button:focus-visible{outline:2px solid #D1336B;outline-offset:2px}.ds-b1{flex:1;background:#D1336B;color:#fff;font-variant-numeric:tabular-nums}.ds-b2{background:#FCE8EF;color:#D1336B}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Counter Ledger",
+    "overview": "Floied is the category standard played straight: a native iOS order book a Momo or banking-app user trusts on sight. The system is the platform's own. You get grouped backgrounds, white inset grouped lists, SF Pro at the system text styles, native tabs and large-title stacks, and SF Symbols. One rose tint marks what you can press and what is selected. There is no themed world to learn. The shop owner reads it the way they read Settings or their bank app, often one-handed at the counter.\n\nThe only places the app speaks louder than the platform are money and order state. Remaining balances are set large in tabular figures, debts read red, a fully paid order turns green, and every order row carries a status pill plus what is still owed. On iOS, color comes from `PlatformColor` (system grouped background, label, separator, systemRed, systemGreen), so Dark Mode and Increase Contrast follow the OS. Android and web use the matching hex values recorded in the frontmatter. The rose tint is the same hex everywhere.\n\nThe layout is dense in the iOS way, built from stacked sections of 48px rows rather than cards and dashboards. A three-tile summary is the only grid on the home screen. The visual rejection the user confirmed is themed worlds and dashboard tiles that hide the money (PRODUCT.md, Brand Commitments).",
+    "keyCharacteristics": [
+      "System grouped lists on a grouped background; the platform's chrome on every OS.",
+      "One brand color, rose, for actions and selection only.",
+      "Money in tabular figures with VND dot separators and a trailing \"đ\"; the remaining amount is the largest number on the order screen.",
+      "Four status meanings, each with its own color: rose (in progress), red (late), green (done), gray (cancelled).",
+      "Flat cells that separate from the background by tone; there are no card shadows.",
+      "Dark Mode and Dynamic Type come from the system."
+    ],
+    "rules": [
+      {
+        "name": "The One Tint Rule",
+        "body": "Rose means \"you can press this\" or \"this is selected\". It is never decoration, a heading color, or a background wash for content.",
+        "section": "colors"
+      },
+      {
+        "name": "The Four Meanings Rule",
+        "body": "Order state has exactly four colors: rose for work in progress (the pill's label names the step), red for late, green for done, gray for cancelled. A new status gets a label, not a new color.",
+        "section": "colors"
+      },
+      {
+        "name": "The Fill-Versus-Text Rule",
+        "body": "White labels sit on `tint-fill`. Rose text uses `tint`, which changes per mode. Don't swap the two.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Money Rule",
+        "body": "Every amount, count, and money input sets `tabular-nums` (the `money` prop on text, `font-variant-numeric` on web inputs). Amounts format as VND with dot grouping and a trailing \"đ\" (`480.000đ`). Summary tiles may abbreviate to \"tr\".",
+        "section": "typography"
+      },
+      {
+        "name": "The Biggest Number Rule",
+        "body": "On an order, the amount still to collect is the largest type on the screen (largeTitle). Total and paid sit beneath it as subhead lines.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tonal Lift Rule",
+        "body": "A surface comes forward by moving from the background color to the cell color, never by a shadow or outline.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** build every screen from Screen → Section → Row/Field on the grouped background, inside the 720px column.",
+      "**Do** use the platform control first (NativeTabs, native stack headers, UISegmentedControl, native date pickers, action sheets). Draw an iOS-like stand-in only where the web lacks one.",
+      "**Do** set every amount in tabular figures as VND with dot grouping and a trailing \"đ\", and give the remaining balance the largest type on an order.",
+      "**Do** color order state with the four status pairs only: rose for in progress, red for late, green for done, gray for cancelled.",
+      "**Do** put white labels on `tint-fill` and use `tint` for rose text and icons.",
+      "**Do** keep one filled button per context. Secondary actions go tinted or plain.",
+      "**Do** show a dash for an unknown amount instead of a fabricated zero."
+    ],
+    "donts": [
+      "**Don't** add a second brand color, gradients, or a themed visual world. The user chose plain native iOS with one rose tint.",
+      "**Don't** use rose for decoration, headings, or content backgrounds. It marks actions and selection.",
+      "**Don't** give a new status its own color. It joins one of the four meanings.",
+      "**Don't** put shadows or borders on cells, tiles, or buttons. Surfaces lift by tone.",
+      "**Don't** replace the money with dashboard tiles or charts that hide what is owed.",
+      "**Don't** introduce a second typeface or sizes outside the iOS text styles."
+    ]
+  }
+}

@@ -1,56 +1,58 @@
-# Welcome to your Expo app 👋
+# Floied
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Sổ đơn chung cho shop hoa nhỏ. Cả shop (chủ + quản lý) cùng thấy đơn hôm nay, đơn trễ, tiền còn thu, và cập nhật realtime khi ai đó đổi trạng thái hay thu tiền. Hoa trước, mô hình dữ liệu để sẵn cho loại đơn khác (bánh, quà…).
 
-## Get started
+- **App**: Expo SDK 58 (React Native 0.88, expo-router). Một codebase cho iOS → web → Android.
+- **Server**: Bun + Hono + SQLite (`bun:sqlite`), WebSocket cho realtime. Thư mục `server/`.
+- **Dùng chung**: `shared/domain.ts` (schema zod, kiểu dữ liệu, trạng thái đơn) cho cả app và server.
 
-1. Install dependencies
-
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## Chạy thử
 
 ```bash
-npm run reset-project
+npm install
+(cd server && bun install)
+
+npm run server        # API ở http://localhost:8787 (dev: mã OTP in ra console và hiện trên màn đăng nhập)
+npx expo start        # i = iOS Simulator, w = web, quét QR bằng Expo Go trên iPhone
 ```
 
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
+iPhone thật qua Expo Go: điện thoại và máy tính cùng Wi‑Fi; app tự gọi API ở `http://<IP máy tính>:8787`.
 
-### Other setup steps
+Kiểm tra:
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+```bash
+npm run test:server   # 14 test: OTP, phân quyền theo shop, mời thành viên, tiền, bảng Hôm nay
+npm run typecheck
+npx expo lint
+```
 
-## Learn more
+## Đã có (phase 1)
 
-To learn more about developing your project with Expo, look at the following resources:
+- Đăng nhập email + mã 6 số (rate limit, khoá sau 5 lần sai, phiên 90 ngày trượt).
+- Tạo shop, nhiều shop / tài khoản, đổi shop. Vai trò **Chủ** (xoá shop, xoá thành viên) và **Quản lý** (mọi dữ liệu đơn).
+- Mời quản lý bằng mã 6 ký tự / link `floied://join/MÃ`, hết hạn 7 ngày, thu hồi được. Người ngoài shop gọi API shop nhận 404.
+- Đơn: khách (tự gợi ý khách quen theo tên/SĐT), sản phẩm, giao tận nơi / khách tới lấy, ngày + khung giờ, lời thiệp, ghi chú, phí ship, giảm giá, cọc.
+- Trạng thái một chạm: Mới → Đang làm → Chờ khách duyệt → Đang giao (Chờ khách lấy) → Đã giao, huỷ / mở lại. Lịch sử ghi ai làm gì.
+- Tiền: còn phải thu luôn hiện to, thu đủ một chạm, thu số khác, mã **VietQR** điền sẵn số tiền + nội dung `DH<số đơn>`, gửi hoá đơn qua Zalo/Messenger (share sheet).
+- **Gọi xe giao**: Grab, Xanh SM, Be, Ahamove, Lalamove. Bấm là chép sẵn "lấy hàng / giao tới / thu hộ" rồi mở app (chưa cài thì mở App Store / Play Store).
+- Hôm nay: Trễ / Sáng / Chiều / Tối / Xong hôm nay / 7 ngày tới. Danh sách đơn có tìm kiếm, khách hàng có tổng đã mua.
+- Realtime giữa các thành viên qua WebSocket, tự kết nối lại.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Lưu ý quan trọng
 
-## Join the community
+- **Deeplink app giao hàng**: Grab, Xanh SM, Be, Ahamove, Lalamove không công bố tham số deeplink để điền sẵn điểm lấy/giao. App chép thông tin vào clipboard rồi mở app. App Store id đã kiểm qua iTunes API; URL scheme (`grab://`, `xanhsm://`, `be://`, `ahamove://`, `lalamove://`) và package Android của Grab/Lalamove **cần thử trên máy thật** (`src/lib/delivery.ts`). Sai scheme thì chỉ mở trang store, không crash.
+- **Email OTP**: chưa có `RESEND_API_KEY` thì server in mã ra console. Mã chỉ được trả trong response khi bật `OTP_DEV_ECHO=1` (script `npm run server` bật sẵn cho dev); đừng bật biến này khi deploy.
+- **Bundle id** `vn.floied.app` là tạm, đổi trong `app.json` trước khi lên store.
+- **SQLite**: một file (`server/data/floied.db`, chế độ WAL). Chạy một instance server; sao lưu bằng Litestream hoặc cron copy.
 
-Join our community of developers creating universal apps.
+## Lộ trình
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+1. Ảnh bó hoa / ảnh giao hàng, danh mục sản phẩm có ảnh.
+2. Lịch tháng, danh sách hoa cần mua, thống kê doanh thu.
+3. Nhắc việc (push), widget + Live Activity trên iOS.
+4. Quét ảnh chụp tin nhắn để lấy tên/SĐT/địa chỉ.
+5. Đăng nhập Apple/Google, vai trò nhân viên (không xem doanh thu), loại đơn ngoài hoa.
+
+## Thiết kế
+
+Dùng [Impeccable](https://github.com/pbakaus/impeccable) (`.claude/skills/impeccable`). Hướng đã chọn: chuẩn iOS thuần, tint hồng `#D1336B`, thước đo độ chỉn chu là Momo / app ngân hàng VN. Xem `PRODUCT.md` và `.impeccable/surfaces/src-app.md`.
